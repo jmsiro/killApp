@@ -50,8 +50,12 @@ if module == "killApp":
         try:
             for proc in psutil.process_iter():
                 # check whether the process name matches
-                if proc.name().lower() == app_+'.exe':
-                    proc.kill()
+                try:
+                    if proc.name().lower() == app_ + '.exe':
+                        proc.kill()
+                        break
+                except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+                    PrintException()
 
         except Exception as e:
             PrintException()

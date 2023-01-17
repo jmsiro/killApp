@@ -1,18 +1,18 @@
-# Kill Application
+# Matar Aplicación
   
 Mata una aplicación por su nombre  
 
-## How to install this module
+## Como instalar este módulo
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
+__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de Rocketbot.  
 
 
 
 ## Overview
 
 
-1. Kill Application  
-Kill Application  
+1. Mata una Aplicación  
+Mata una Aplicación  
 
 
 

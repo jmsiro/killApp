@@ -40,6 +40,9 @@ module = GetParams("module")
 if module == "killApp":
 
     app_ = GetParams('app_').lower()
+    killAll_ = GetParams('killAll_')
+    if killAll_ == None:
+        killAll_ = False
 
     platform_ = platform.system().lower()
 
@@ -53,7 +56,8 @@ if module == "killApp":
                 try:
                     if proc.name().lower() == app_ + '.exe':
                         proc.kill()
-                        break
+                        if killAll_ == False:
+                            break
                 except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
                     PrintException()
 
